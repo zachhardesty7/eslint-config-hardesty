@@ -32,6 +32,7 @@ module.exports = {
 	},
 
 	rules: {
+		// react
 		'react-hooks/rules-of-hooks': 'error',
 		'react-hooks/exhaustive-deps': 'warn',
 		'react-native/no-raw-text': 'off',
@@ -52,8 +53,6 @@ module.exports = {
 				]
 			}
 		],
-		indent: ['error', 'tab'],
-		'no-tabs': 'off',
 		'react/jsx-indent': [
 			'error',
 			'tab',
@@ -70,6 +69,9 @@ module.exports = {
 			'error',
 			'prefer-single'
 		],
+		indent: ['error', 'tab'],
+		'no-tabs': 'off',
+		'no-unused-vars': 'warn',
 		'standard/array-bracket-even-spacing': 'off',
 		'standard/computed-property-even-spacing': 'off',
 		'standard/object-curly-even-spacing': 'off',
