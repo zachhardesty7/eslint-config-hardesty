@@ -4,10 +4,6 @@ This package provides Zach Hardesty's .eslintrc as an extensible shared config.
 
 ## Usage
 
-We export three ESLint configurations for your usage.
-
-### eslint-config-hardesty/
-
 Our default export contains all of our ESLint rules, including ECMAScript 6+ and React. It requires `eslint`, `eslint-plugin-import`, `eslint-plugin-react`, and `eslint-plugin-jsx-a11y`. If you don't need React, see [eslint-config-airbnb-base](https://npmjs.com/eslint-config-airbnb-base).
 
 1. Install the correct versions of each package, which are listed by the command:
