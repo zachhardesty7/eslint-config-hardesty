@@ -98,7 +98,7 @@ module.exports = {
 		'jsdoc/check-tag-names': 'warn',
 		'jsdoc/check-types': 'warn',
 		'jsdoc/implements-on-classes': 'warn',
-		'jsdoc/match-description': 'warn',
+		'jsdoc/match-description': 'off',
 		'jsdoc/newline-after-description': 'warn',
 		'jsdoc/require-hyphen-before-param-description': 'warn',
 		'jsdoc/require-jsdoc': [
