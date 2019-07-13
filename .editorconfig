@@ -1,1 +1,8 @@
-../../.editorconfig
+# 2 width tab indentation
+[*]
+indent_style = tab
+indent_size = 2
+
+[.*]
+indent_style = tab
+indent_size = 2

@@ -1,7 +1,7 @@
 {
-  "name": "eslint-config-airbnb",
-  "version": "17.1.1",
-  "description": "Airbnb's ESLint config, following our styleguide",
+  "name": "eslint-config-hardesty",
+  "version": "1.0.0",
+  "description": "Zach Hardesty's ESLint config, forked from Airbnb",
   "main": "index.js",
   "scripts": {
     "prelint": "editorconfig-tools check * rules/* test/*",
@@ -18,13 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/airbnb/javascript"
+    "url": "https://github.com/zachhardesty7/eslint-config-hardesty"
   },
   "keywords": [
     "eslint",
     "eslintconfig",
     "config",
-    "airbnb",
     "javascript",
     "styleguide",
     "es2015",
@@ -32,8 +31,12 @@
     "es2017",
     "es2018"
   ],
-  "author": "Jake Teton-Landis (https://twitter.com/@jitl)",
+  "author": "Zach Hardesty (https://zachhardesty.com)",
   "contributors": [
+    {
+      "name": "Zach Hardesty",
+      "url": "https://zachhardesty.com"
+    },
     {
       "name": "Jake Teton-Landis",
       "url": "https://twitter.com/jitl"
@@ -50,9 +53,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/airbnb/javascript/issues"
+    "url": "https://github.com/zachhardesty7/eslint-config-hardesty/issues"
   },
-  "homepage": "https://github.com/airbnb/javascript",
+  "homepage": "https://github.com/zachhardesty7/eslint-config-hardesty",
   "dependencies": {
     "eslint-config-airbnb-base": "^13.2.0",
     "object.assign": "^4.1.0",
