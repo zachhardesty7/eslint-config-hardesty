@@ -21,12 +21,8 @@ module.exports = {
 	settings: {
 		jsdoc: {
 			ignorePrivate: true,
-			forceRequireReturn: true,
 			preferredTypes: {
 				'*': false,
-				'.<>': true,
-				'<>': true,
-				'[]': true
 			}
 		}
 	},
