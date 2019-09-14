@@ -123,6 +123,7 @@ module.exports = {
 			'react/jsx-no-undef': 'off',
 			'react/jsx-filename-extension': 'off',
 			'react/jsx-indent-props': 'off',
+			indent: 'off',
 			semi: 'off',
 			'no-unused-expressions': 'off'
 		}
