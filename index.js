@@ -4,12 +4,11 @@ export default {
     'jsdoc',
     'optimize-regex',
     'markdown',
-    'react-hooks',
   ],
 
   extends: [
-    'eslint-config-airbnb',
-    'eslint-config-standard',
+    'airbnb',
+    'standard',
     'airbnb/hooks',
     'plugin:jsdoc/recommended'
   ],
