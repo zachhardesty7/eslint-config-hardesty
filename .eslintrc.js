@@ -70,6 +70,12 @@ module.exports = {
       'prefer-single',
     ],
     'no-unused-vars': 'warn',
+    // could be simplified since mostly only issue with JSDoc tags
+    'max-len': ['warn', {
+      code: 100,
+      ignoreComments: true,
+      ignoreUrls: true,
+    }],
     'standard/array-bracket-even-spacing': 'off',
     'standard/computed-property-even-spacing': 'off',
     'standard/object-curly-even-spacing': 'off',
@@ -99,6 +105,13 @@ module.exports = {
         exemptEmptyFunctions: true,
       },
     ],
+    // use temporarily until `types.d.ts` can be processed
+    'jsdoc/no-undefined-types': 'off',
+    // include typescript globals https://www.typescriptlang.org/docs/handbook/utility-types.html
+    // 'jsdoc/no-undefined-types': ['warn', { definedTypes: ['Partial', 'Readonly',
+    // 'Record', 'Pick', 'Omit', 'Exclude', 'Extract', 'NonNullable', 'Parameters',
+    // 'ConstructorParameters', 'ReturnType', 'InstanceType', 'Required',
+    // 'ThisParameterType', 'OmitThisParameter', 'ThisType'] }],
   },
 
   overrides: [{

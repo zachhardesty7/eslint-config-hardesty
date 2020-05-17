@@ -1,8 +1,8 @@
 {
   "name": "eslint-config-hardesty",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Zach Hardesty's ESLint config, forked from Airbnb",
-  "main": ".eslintrc.js",
+  "main": "index.js",
   "scripts": {
     "test": "tape tests/test.js",
     "lint": "eslint tests/*",
