@@ -1,10 +1,11 @@
 {
   "name": "eslint-config-hardesty",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Zach Hardesty's ESLint config, forked from Airbnb",
   "main": ".eslintrc.js",
   "scripts": {
-    "lint": "eslint .",
+    "test": "tape tests/test.js",
+    "lint": "eslint tests/*",
     "link:eslint": "cd node_modules/eslint && npm link --production && cd -"
   },
   "repository": {
@@ -65,7 +66,8 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.0.0",
-    "safe-publish-latest": "^1.1.4"
+    "safe-publish-latest": "^1.1.4",
+    "tape": "^5.0.0"
   },
   "peerDependencies": {
     "babel-eslint": "^10.1.0",

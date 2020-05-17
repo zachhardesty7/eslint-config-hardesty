@@ -1,4 +1,4 @@
-# 2 width tab indentation
+# 2 width space indentation
 [*]
 indent_style = space
 indent_size = 2
