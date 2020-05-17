@@ -10,17 +10,17 @@ module.exports = {
     'airbnb',
     'standard',
     'airbnb/hooks',
-    'plugin:jsdoc/recommended'
+    'plugin:jsdoc/recommended',
   ],
 
   env: {
     es6: true,
     browser: true,
-    node: true
+    node: true,
   },
 
   globals: {
-    fetch: true
+    fetch: true,
   },
 
   settings: {
@@ -28,19 +28,18 @@ module.exports = {
       ignorePrivate: true,
       preferredTypes: {
         '*': false,
-      }
-    }
+      },
+    },
   },
 
   rules: {
     // react
-    'react-native/no-raw-text': 'off',
     'react/state-in-constructor': ['warn', 'never'],
     'react/prop-types': [
       'warn',
       {
-        skipUndeclared: true
-      }
+        skipUndeclared: true,
+      },
     ],
     'react/require-default-props': 'off',
     'react/no-unescaped-entities': 'off',
@@ -49,25 +48,26 @@ module.exports = {
       {
         extensions: [
           '.js',
-          '.jsx'
-        ]
-      }
+          '.jsx',
+        ],
+      },
     ],
     'react/jsx-indent': [
       'error',
       2,
       {
         checkAttributes: true,
-        indentLogicalExpressions: true
-      }
+        indentLogicalExpressions: true,
+      },
     ],
     'react/jsx-indent-props': [
       'error',
-      2
+      2,
     ],
+    'react/jsx-props-no-spreading': 'off',
     'jsx-quotes': [
       'error',
-      'prefer-single'
+      'prefer-single',
     ],
     'no-unused-vars': 'warn',
     'standard/array-bracket-even-spacing': 'off',
@@ -84,12 +84,12 @@ module.exports = {
     'sort-imports': [
       'warn',
       {
-        ignoreDeclarationSort: true
-      }
+        ignoreDeclarationSort: true,
+      },
     ],
     'space-before-function-paren': [
       'error',
-      'never'
+      'never',
     ],
     // https://www.npmjs.com/package/eslint-plugin-jsdoc#eslint-plugin-jsdoc-settings-allow-private-to-disable-rules-for-that-comment-block
     'jsdoc/check-syntax': 'warn',
@@ -111,7 +111,7 @@ module.exports = {
       'react/jsx-indent-props': 'off',
       indent: 'off',
       semi: 'off',
-      'no-unused-expressions': 'off'
-    }
-  }]
+      'no-unused-expressions': 'off',
+    },
+  }],
 }
