@@ -73,8 +73,12 @@ module.exports = {
     // could be simplified since mostly only issue with JSDoc tags
     'max-len': ['warn', {
       code: 100,
-      ignoreComments: true,
       ignoreUrls: true,
+      ignoreComments: false,
+      ignoreRegExpLiterals: true,
+      ignoreTemplateLiterals: true,
+      ignorePattern: '^ \\* @.+',
+      ignoreStrings: true,
     }],
     'standard/array-bracket-even-spacing': 'off',
     'standard/computed-property-even-spacing': 'off',
