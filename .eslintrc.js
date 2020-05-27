@@ -25,6 +25,7 @@ module.exports = {
 
   settings: {
     jsdoc: {
+      mode: 'typescript',
       ignorePrivate: true,
       preferredTypes: {
         '*': false,
