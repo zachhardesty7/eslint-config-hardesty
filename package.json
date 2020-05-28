@@ -4,7 +4,7 @@
   "description": "Zach Hardesty's ESLint config, forked from Airbnb",
   "main": "index.js",
   "scripts": {
-    "prepublish": "safe-publish-latest",
+    "prepublishOnly": "safe-publish-latest",
     "test": "tape tests/test.js",
     "lint": "eslint tests/*",
     "link:eslint": "cd node_modules/eslint && npm link --production && cd -"
