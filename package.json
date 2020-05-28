@@ -1,9 +1,10 @@
 {
   "name": "eslint-config-hardesty",
-  "version": "1.9.2",
+  "version": "1.9.3",
   "description": "Zach Hardesty's ESLint config, forked from Airbnb",
   "main": "index.js",
   "scripts": {
+    "prepublish": "safe-publish-latest",
     "test": "tape tests/test.js",
     "lint": "eslint tests/*",
     "link:eslint": "cd node_modules/eslint && npm link --production && cd -"
@@ -53,25 +54,24 @@
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jsdoc": "^25.4.1",
+    "eslint-plugin-jsdoc": "^26.0.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-markdown": "^1.0.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-optimize-regex": "^1.2.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^4.0.2",
+    "eslint-plugin-react-hooks": "^4.0.4",
     "eslint-plugin-standard": "^4.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.0.0",
+    "eslint": "^7.1.0",
     "safe-publish-latest": "^1.1.4",
-    "tape": "^5.0.0"
+    "tape": "^5.0.1"
   },
   "peerDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.0.0",
-    "eslint-plugin-react": "^7.20.0"
+    "eslint": "^7.1.0"
   }
 }
