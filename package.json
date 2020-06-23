@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-hardesty",
-  "version": "1.9.3",
+  "version": "1.10.0",
   "description": "Zach Hardesty's ESLint config, forked from Airbnb",
   "main": "index.js",
   "scripts": {
@@ -51,11 +51,11 @@
   "homepage": "https://github.com/zachhardesty7/eslint-config-hardesty",
   "dependencies": {
     "escape-regex-string": "^1.0.6",
-    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-airbnb": "^18.2.0",
     "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jsdoc": "^26.0.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsdoc": "^28.5.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-markdown": "^1.0.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-optimize-regex": "^1.2.0",
@@ -66,12 +66,12 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.1.0",
+    "eslint": "^7.3.1",
     "safe-publish-latest": "^1.1.4",
     "tape": "^5.0.1"
   },
   "peerDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.1.0"
+    "eslint": "^7.3.1"
   }
 }
