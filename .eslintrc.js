@@ -1,16 +1,10 @@
 module.exports = {
   // parser: 'babel-eslint',
   // TODO: https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
-    // "project": "./tsconfig.json" // <-- Point to your project's tsconfig.json or create new one
-  },
-  plugins: ['@typescript-eslint', 'jsdoc', 'optimize-regex', 'markdown'],
+  parser: 'babel-eslint',
+  plugins: ['jsdoc', 'optimize-regex', 'markdown'],
 
   extends: [
-    'plugin:@typescript-eslint/recommended',
     'airbnb',
     'standard',
     'airbnb/hooks',
@@ -91,7 +85,7 @@ module.exports = {
     'promise/catch-or-return': 'warn',
     'promise/always-return': 'warn',
     'import/prefer-default-export': 'off',
-    'import/namespace': 'warn',
+    'import/namespace': 'off', // <- warn
     'sort-imports': [
       'warn',
       {
@@ -101,32 +95,33 @@ module.exports = {
     'space-before-function-paren': ['error', 'never'],
 
     // typescript
-    'no-unused-vars': 'off',
-    quotes: 'off',
-    // note you must disable the base rule as it can report incorrect errors
-    semi: 'off',
-    '@typescript-eslint/semi': [
-      'error',
-      'never',
-      { beforeStatementContinuationChars: 'always' },
-    ],
-    '@typescript-eslint/quotes': ['error', 'single'],
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/member-delimiter-style': [
-      'error',
-      {
-        multiline: {
-          delimiter: 'none',
-        },
-        // default
-        singleline: {
-          delimiter: 'semi',
-          requireLast: false,
-        },
-      },
-    ],
+    // 'no-unused-vars': 'off',
+    // quotes: 'off',
+    // semi: 'off',
+    // 'no-empty-function': 'off',
+    // '@typescript-eslint/no-empty-function': ['warn', { allow: ['arrowFunctions'] }],
+    // '@typescript-eslint/semi': [
+    //   'error',
+    //   'never',
+    //   { beforeStatementContinuationChars: 'always' },
+    // ],
+    // '@typescript-eslint/quotes': ['error', 'single'],
+    // '@typescript-eslint/no-var-requires': 'off',
+    // '@typescript-eslint/member-delimiter-style': [
+    //   'error',
+    //   {
+    //     multiline: {
+    //       delimiter: 'none',
+    //     },
+    //     // default
+    //     singleline: {
+    //       delimiter: 'semi',
+    //       requireLast: false,
+    //     },
+    //   },
+    // ],
     // only use in TS, see below override
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    // '@typescript-eslint/explicit-module-boundary-types': 'off',
 
     // jsdoc
     // https://www.npmjs.com/package/eslint-plugin-jsdoc#eslint-plugin-jsdoc-settings-allow-private-to-disable-rules-for-that-comment-block
@@ -148,13 +143,13 @@ module.exports = {
   },
 
   overrides: [
-    {
-      // enable the rule specifically for TypeScript files
-      files: ['*.ts', '*.tsx'],
-      rules: {
-        '@typescript-eslint/explicit-module-boundary-types': ['error'],
-      },
-    },
+    // {
+    //   // enable the rule specifically for TypeScript files
+    //   files: ['*.ts', '*.tsx'],
+    //   rules: {
+    //     '@typescript-eslint/explicit-module-boundary-types': ['error'],
+    //   },
+    // },
     {
       files: ['**/*.md'],
       rules: {
