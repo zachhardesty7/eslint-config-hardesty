@@ -2,6 +2,11 @@ module.exports = {
   // parser: 'babel-eslint',
   // TODO: https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    // "project": "./tsconfig.json" // <-- Point to your project's tsconfig.json or create new one
+  },
   plugins: ['@typescript-eslint', 'jsdoc', 'optimize-regex', 'markdown'],
 
   extends: [
