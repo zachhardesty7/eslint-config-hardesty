@@ -4,5 +4,6 @@ module.exports = {
     'prettier',
     'prettier/react',
     'prettier/standard',
+    'prettier/unicorn',
   ],
 }
