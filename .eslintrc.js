@@ -1,5 +1,4 @@
 module.exports = {
-  // parser: 'babel-eslint',
   // TODO: https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
   parser: 'babel-eslint',
   plugins: ['jsdoc', 'optimize-regex', 'markdown'],
@@ -95,6 +94,7 @@ module.exports = {
     'space-before-function-paren': ['error', 'never'],
 
     // typescript
+    // REVIEW: eslint-import-resolver-node
     // 'no-unused-vars': 'off',
     // quotes: 'off',
     // semi: 'off',
