@@ -4,11 +4,11 @@ module.exports = {
   plugins: ['jsdoc', 'optimize-regex', 'markdown', 'unicorn'],
 
   extends: [
-    'plugin:unicorn/recommended',
     'airbnb',
     'standard',
     'airbnb/hooks',
     'plugin:jsdoc/recommended',
+    'plugin:unicorn/recommended',
   ],
 
   env: {
