@@ -1,9 +1,10 @@
 module.exports = {
   // TODO: https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
   parser: 'babel-eslint',
-  plugins: ['jsdoc', 'optimize-regex', 'markdown'],
+  plugins: ['jsdoc', 'optimize-regex', 'markdown', 'unicorn'],
 
   extends: [
+    'plugin:unicorn/recommended',
     'airbnb',
     'standard',
     'airbnb/hooks',

@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-hardesty",
-  "version": "3.0.2",
+  "version": "3.2.0",
   "description": "Zach Hardesty's ESLint config, forked from Airbnb",
   "main": "index.js",
   "scripts": {
@@ -67,6 +67,7 @@
   },
   "devDependencies": {
     "eslint": "^7.4.0",
+    "eslint-plugin-unicorn": "^20.1.0",
     "safe-publish-latest": "^1.1.4",
     "tape": "^5.0.1"
   },
