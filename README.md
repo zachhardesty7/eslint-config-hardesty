@@ -24,6 +24,17 @@ Our default export contains all of our ESLint rules, including ECMAScript 6+ and
   ```
 
   If using **yarn**, you can also use the shortcut described above if you have npm 5+ installed on your machine, as the command will detect that you are using yarn and will act accordingly.
-  Otherwise, run `npm info "eslint-config-hardesty@latest" peerDependencies` to list the peer dependencies and versions, then run `yarn add --dev <dependency>@<version>` for each listed peer dependency.
+  Otherwise, run `npm info "eslint-config-hardesty@latest" peerDependencies` to list the
+  peer dependencies and versions, then run `yarn add --dev <dependency>@<version>` for
+  each listed peer dependency.
+  
 2. Add `"extends": "hardesty"` to your .eslintrc or set `eslintConfig: { "extends": "hardesty" },`
-   in your `package.json`
+   in your `package.json`.
+   If you want to use Prettier, use `"hardesty/prettier"` instead. It's expected that
+   you will also add the following to your `package.json`.
+
+   ```json
+   "prettier": {
+     "semi": false
+   },
+    ```
