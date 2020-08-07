@@ -102,6 +102,11 @@ module.exports = {
       },
     ],
     'space-before-function-paren': ['error', 'never'],
+    'jsx-a11y/anchor-is-valid': ['error', {
+      components: [],
+      specialLink: ['hrefLeft', 'hrefRight'],
+      aspects: ['noHref', 'invalidHref', 'preferButton'],
+    }],
 
     // MARK: typescript
     // REVIEW: eslint-import-resolver-node
