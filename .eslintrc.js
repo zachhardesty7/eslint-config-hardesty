@@ -12,13 +12,9 @@ module.exports = {
   ],
 
   env: {
-    es6: true,
+    es2020: true,
     browser: true,
     node: true,
-  },
-
-  globals: {
-    fetch: true,
   },
 
   settings: {
