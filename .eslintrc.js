@@ -19,8 +19,11 @@ module.exports = {
 
   settings: {
     jsdoc: {
-      mode: 'typescript',
+      mode: 'permissive',
       ignorePrivate: true,
+      tagNamePreference: {
+        returns: 'returns',
+      },
       preferredTypes: {
         '*': false,
       },
