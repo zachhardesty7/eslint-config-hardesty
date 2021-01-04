@@ -104,6 +104,13 @@ module.exports = {
     ],
     'space-before-function-paren': ['error', 'never'],
 
+    'no-restricted-syntax': [
+      'error',
+      'ForInStatement',
+      'LabeledStatement',
+      'WithStatement',
+    ],
+
     // MARK: typescript
     // REVIEW: eslint-import-resolver-node
     // 'no-unused-vars': 'off',
