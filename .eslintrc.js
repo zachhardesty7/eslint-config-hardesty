@@ -1,7 +1,12 @@
 module.exports = {
   // TODO: https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
-  parser: 'babel-eslint',
-  plugins: ['jsdoc', 'optimize-regex', 'markdown', 'unicorn'],
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    requireConfigFile: false,
+  },
+
+  // https://github.com/babel/babel/tree/main/eslint/babel-eslint-plugin
+  plugins: ['@babel', 'jsdoc', 'optimize-regex', 'markdown', 'unicorn'],
 
   extends: [
     'airbnb',
