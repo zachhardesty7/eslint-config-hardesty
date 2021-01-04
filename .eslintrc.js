@@ -12,18 +12,15 @@ module.exports = {
   ],
 
   env: {
-    es2020: true,
+    es2021: true,
     browser: true,
     node: true,
   },
 
   settings: {
     jsdoc: {
-      mode: 'permissive',
+      mode: 'typescript',
       ignorePrivate: true,
-      tagNamePreference: {
-        returns: 'returns',
-      },
       preferredTypes: {
         '*': false,
       },
@@ -101,11 +98,6 @@ module.exports = {
       },
     ],
     'space-before-function-paren': ['error', 'never'],
-    'jsx-a11y/anchor-is-valid': ['error', {
-      components: [],
-      specialLink: ['hrefLeft', 'hrefRight'],
-      aspects: ['noHref', 'invalidHref', 'preferButton'],
-    }],
 
     // MARK: typescript
     // REVIEW: eslint-import-resolver-node
