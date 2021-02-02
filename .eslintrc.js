@@ -96,6 +96,8 @@ module.exports = {
     'promise/always-return': 'warn',
     'import/prefer-default-export': 'off',
     'import/namespace': 'off', // <- warn
+    /** `type="module"` requires ext, plus this is more style than anything else */
+    'import/extensions': 'off',
     'sort-imports': [
       'warn',
       {
