@@ -27,7 +27,6 @@ Our default export contains all of our ESLint rules, including ECMAScript 6+ and
   Otherwise, run `npm info "eslint-config-hardesty@latest" peerDependencies` to list the
   peer dependencies and versions, then run `yarn add --dev <dependency>@<version>` for
   each listed peer dependency.
-  
 2. Add `"extends": "hardesty"` to your .eslintrc or set `eslintConfig: { "extends": "hardesty" },`
    in your `package.json`.
    If you want to use Prettier, use `"hardesty/prettier"` instead. It's expected that

@@ -1,5 +1,4 @@
-/* eslint strict: 0, global-require: 0 */
-
+/* eslint-disable unicorn/prefer-module, strict, global-require */
 const fs = require('fs')
 const eslint = require('eslint')
 const test = require('tape')
@@ -23,7 +22,7 @@ test('load config in eslint to validate all syntax rules are correct', (t) => {
     configFile: '.eslintrc.js',
   })
 
-  fs.readdirSync('./tests/').forEach((fileName) => {
+  for (const fileName of fs.readdirSync('./tests/')) {
     if (!fileName.includes('test')) {
       const file = fs.readFileSync(`./tests/${fileName}`)
       const result = cli.executeOnText(file.toString())
@@ -33,7 +32,7 @@ test('load config in eslint to validate all syntax rules are correct', (t) => {
         console.log(result.results[0].messages)
       }
     }
-  })
+  }
 
   t.end()
 })

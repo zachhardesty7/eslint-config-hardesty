@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-hardesty",
-    "version": "4.2.0",
+    "version": "5.0.0",
     "description": "Zach Hardesty's ESLint config, forked from Airbnb. To use, extend either `hardesty` or `hardesty/prettier`",
     "main": "index.js",
     "scripts": {
@@ -50,33 +50,33 @@
     },
     "homepage": "https://github.com/zachhardesty7/eslint-config-hardesty",
     "dependencies": {
-        "@babel/core": "^7.12.10",
-        "@babel/eslint-parser": "^7.12.1",
-        "@babel/eslint-plugin": "^7.12.1",
+        "@babel/core": "^7.15.8",
+        "@babel/eslint-parser": "^7.15.8",
+        "@babel/eslint-plugin": "^7.14.5",
         "escape-regex-string": "^1.0.6",
         "eslint-config-airbnb": "^18.2.1",
-        "eslint-config-standard": "^16.0.2",
-        "eslint-plugin-import": "^2.22.1",
-        "eslint-plugin-jsdoc": "^31.6.0",
+        "eslint-config-standard": "^16.0.3",
+        "eslint-plugin-import": "^2.25.2",
+        "eslint-plugin-jsdoc": "^36.1.1",
         "eslint-plugin-jsx-a11y": "^6.4.1",
-        "eslint-plugin-markdown": "^1.0.2",
+        "eslint-plugin-markdown": "^2.2.1",
         "eslint-plugin-node": "^11.1.0",
-        "eslint-plugin-optimize-regex": "^1.2.0",
-        "eslint-plugin-promise": "^4.2.1",
-        "eslint-plugin-react": "^7.22.0",
+        "eslint-plugin-optimize-regex": "^1.2.1",
+        "eslint-plugin-promise": "^5.1.0",
+        "eslint-plugin-react": "^7.26.1",
         "eslint-plugin-react-hooks": "^4.2.0",
         "eslint-plugin-standard": "^5.0.0",
-        "eslint-plugin-unicorn": "^27.0.0"
+        "eslint-plugin-unicorn": "^37.0.1"
     },
     "devDependencies": {
-        "eslint": "^7.19.0",
-        "safe-publish-latest": "^1.1.4",
-        "tape": "^5.1.1"
+        "eslint": "^8.0.1",
+        "safe-publish-latest": "^2.0.0",
+        "tape": "^5.3.1"
     },
     "peerDependencies": {
-        "eslint": "^7.19.0"
+        "eslint": "^8.0.1"
     },
     "optionalDependencies": {
-        "eslint-config-prettier": "^7.2.0"
+        "eslint-config-prettier": "^8.3.0"
     }
 }
