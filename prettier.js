@@ -4,4 +4,7 @@ module.exports = {
     'hardesty',
     'prettier',
   ],
+  rules: {
+    'unicorn/template-indent': 'off',
+  },
 }
