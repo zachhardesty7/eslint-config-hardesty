@@ -154,6 +154,8 @@ module.exports = {
         exemptEmptyFunctions: true,
       },
     ],
+    // incorrectly reports bolded words (eg **NOTE**)
+    'jsdoc/no-multi-asterisks': ['warn', { preventAtMiddleLines: false }],
     // use temporarily until `types.d.ts` can be processed
     'jsdoc/no-undefined-types': 'off',
     // include typescript globals https://www.typescriptlang.org/docs/handbook/utility-types.html

@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-hardesty",
-    "version": "5.0.1",
+    "version": "5.0.2",
     "description": "Zach Hardesty's ESLint config, forked from Airbnb. To use, extend either `hardesty` or `hardesty/prettier`",
     "main": "index.js",
     "scripts": {
