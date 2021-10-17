@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "prepublishOnly": "safe-publish-latest",
+        "pub": "npm publish",
         "test": "tape tests/test.js",
         "lint": "eslint tests/*",
         "link:eslint": "cd node_modules/eslint && npm link --production && cd -"
