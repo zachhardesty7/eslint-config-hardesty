@@ -1,6 +1,10 @@
 // eslint-disable-next-line unicorn/prefer-module
 module.exports = {
-  extends: ['plugin:@typescript-eslint/recommended', 'prettier'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'prettier',
+  ],
   parser: '@typescript-eslint/parser',
   plugins: [],
   ignorePatterns: '*.js',
@@ -20,12 +24,6 @@ module.exports = {
     semi: 'off',
     'no-empty-function': 'off',
     '@typescript-eslint/no-empty-function': ['warn', { allow: ['arrowFunctions'] }],
-    '@typescript-eslint/semi': [
-      'error',
-      'never',
-      { beforeStatementContinuationChars: 'always' },
-    ],
-    '@typescript-eslint/quotes': ['error', 'single'],
     '@typescript-eslint/no-var-requires': 'off',
     'promise/catch-or-return': 'off',
     '@typescript-eslint/no-extra-semi': 'off',
@@ -33,18 +31,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/explicit-module-boundary-types': 'error',
     '@typescript-eslint/no-non-null-assertion': 'error',
-    '@typescript-eslint/member-delimiter-style': [
-      'error',
-      {
-        multiline: {
-          delimiter: 'none',
-        },
-        // default
-        singleline: {
-          delimiter: 'semi',
-          requireLast: false,
-        },
-      },
-    ],
+    // REVIEW: jsdoc commenter rules
+    // 'unicorn/import-style': 'off',
   },
 }
