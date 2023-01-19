@@ -6,6 +6,10 @@ module.exports = {
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: { jsx: true },
+    project: './tsconfig.json',
+  },
   plugins: [],
   ignorePatterns: '*.js',
   overrides: [
