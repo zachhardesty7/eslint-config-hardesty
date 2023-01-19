@@ -15,6 +15,7 @@ module.exports = {
     'airbnb/hooks',
     'plugin:jsdoc/recommended',
     'plugin:unicorn/recommended',
+    'prettier',
   ],
 
   env: {
@@ -34,16 +35,19 @@ module.exports = {
   },
 
   rules: {
-    // MARK: unicorn
+    // #region - unicorn
     // https://github.com/sindresorhus/eslint-plugin-unicorn
     'unicorn/prefer-number-properties': 'warn',
     'unicorn/prefer-spread': 'warn',
     'unicorn/prevent-abbreviations': 'off',
-    'unicorn/no-reduce': 'off',
     'unicorn/no-null': 'off',
     'unicorn/explicit-length-check': 'off',
     'unicorn/filename-case': 'off',
-    // MARK: react
+    'unicorn/prefer-node-protocol': 'off', // too soon
+    'unicorn/prefer-module': 'off', // too soon
+    'unicorn/template-indent': 'off',
+    // #endregion
+    // #region - react
     'react/state-in-constructor': ['warn', 'never'],
     'react/prop-types': [
       'warn',
@@ -70,9 +74,9 @@ module.exports = {
     'react/jsx-indent-props': ['error', 2],
     'react/jsx-props-no-spreading': 'off',
     'jsx-quotes': ['error', 'prefer-single'],
-
-    // MARK: misc & recommended overrides
-    // 'no-unused-vars': 'warn', // overridden via TS
+    // #endregion
+    // #region - misc & recommended overrides
+    'no-unused-vars': 'warn', // overridden via TS
     // could be simplified since mostly only issue with JSDoc tags
     'max-len': [
       'warn',
@@ -106,45 +110,16 @@ module.exports = {
       },
     ],
     'space-before-function-paren': ['error', 'never'],
-
+    curly: ['error', 'all'],
+    'max-statements-per-line': 'error',
     'no-restricted-syntax': [
       'error',
       'ForInStatement',
       'LabeledStatement',
       'WithStatement',
     ],
-
-    // MARK: typescript
-    // REVIEW: eslint-import-resolver-node
-    // 'no-unused-vars': 'off',
-    // quotes: 'off',
-    // semi: 'off',
-    // 'no-empty-function': 'off',
-    // '@typescript-eslint/no-empty-function': ['warn', { allow: ['arrowFunctions'] }],
-    // '@typescript-eslint/semi': [
-    //   'error',
-    //   'never',
-    //   { beforeStatementContinuationChars: 'always' },
-    // ],
-    // '@typescript-eslint/quotes': ['error', 'single'],
-    // '@typescript-eslint/no-var-requires': 'off',
-    // '@typescript-eslint/member-delimiter-style': [
-    //   'error',
-    //   {
-    //     multiline: {
-    //       delimiter: 'none',
-    //     },
-    //     // default
-    //     singleline: {
-    //       delimiter: 'semi',
-    //       requireLast: false,
-    //     },
-    //   },
-    // ],
-    // only use in TS, see below override
-    // '@typescript-eslint/explicit-module-boundary-types': 'off',
-
-    // MARK: jsdoc
+    // #endregion
+    // #region - jsdoc
     // https://www.npmjs.com/package/eslint-plugin-jsdoc#eslint-plugin-jsdoc-settings-allow-private-to-disable-rules-for-that-comment-block
     'jsdoc/check-syntax': 'warn',
     'jsdoc/require-hyphen-before-param-description': 'warn',
