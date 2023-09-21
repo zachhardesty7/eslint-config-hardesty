@@ -38,5 +38,7 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'error',
     // REVIEW: jsdoc commenter rules
     // 'unicorn/import-style': 'off',
+
+    '@typescript-eslint/no-floating-promises': 'off', // false positives in try/catch & more
   },
 }
