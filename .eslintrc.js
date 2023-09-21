@@ -138,6 +138,15 @@ module.exports = {
     // 'Record', 'Pick', 'Omit', 'Exclude', 'Extract', 'NonNullable', 'Parameters',
     // 'ConstructorParameters', 'ReturnType', 'InstanceType', 'Required',
     // 'ThisParameterType', 'OmitThisParameter', 'ThisType'] }],
+    // #endregion
+
+    // REVIEW: jsdoc commenter rules
+    // 'unicorn/import-style': 'off',
+    // 'promise/catch-or-return': 'off',
+
+    // #region - imports
+    'import/no-unresolved': 'off',
+    // #endregion
   },
 
   overrides: [

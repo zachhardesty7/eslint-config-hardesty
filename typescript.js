@@ -1,3 +1,5 @@
+// TODO: review https://github.com/xojs/eslint-config-xo/blob/main/browser.js
+
 // eslint-disable-next-line unicorn/prefer-module
 module.exports = {
   extends: [
@@ -11,7 +13,6 @@ module.exports = {
     project: './tsconfig.json',
   },
   plugins: [],
-  ignorePatterns: '*.js',
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
