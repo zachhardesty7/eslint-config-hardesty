@@ -138,6 +138,9 @@ module.exports = {
     // 'Record', 'Pick', 'Omit', 'Exclude', 'Extract', 'NonNullable', 'Parameters',
     // 'ConstructorParameters', 'ReturnType', 'InstanceType', 'Required',
     // 'ThisParameterType', 'OmitThisParameter', 'ThisType'] }],
+
+    // handled by prettier
+    'jsdoc/tag-lines': 'off',
     // #endregion
 
     // REVIEW: jsdoc commenter rules
