@@ -1,83 +1,83 @@
 {
-    "name": "eslint-config-hardesty",
-    "version": "6.3.1",
-    "description": "Zach Hardesty's ESLint config, forked from Airbnb. To use, extend `hardesty` and optionally `hardesty/typescript`",
-    "main": "index.js",
-    "scripts": {
-        "prepublishOnly": "safe-publish-latest",
-        "pub": "npm publish",
-        "test": "tape tests/test.js",
-        "lint": "eslint tests/*",
-        "link:eslint": "cd node_modules/eslint && npm link --production && cd -"
+  "name": "eslint-config-hardesty",
+  "version": "6.3.1",
+  "description": "Zach Hardesty's ESLint config, forked from Airbnb. To use, extend `hardesty` and optionally `hardesty/typescript`",
+  "main": "index.js",
+  "scripts": {
+    "prepublishOnly": "safe-publish-latest",
+    "pub": "npm publish",
+    "test": "tape tests/test.js",
+    "lint": "eslint tests/*",
+    "link:eslint": "cd node_modules/eslint && npm link --production && cd -"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zachhardesty7/eslint-config-hardesty"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "javascript",
+    "styleguide",
+    "es2015",
+    "es2016",
+    "es2017",
+    "es2018"
+  ],
+  "author": "Zach Hardesty (https://zachhardesty.com)",
+  "contributors": [
+    {
+      "name": "Zach Hardesty",
+      "url": "https://zachhardesty.com"
     },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/zachhardesty7/eslint-config-hardesty"
+    {
+      "name": "Jake Teton-Landis",
+      "url": "https://twitter.com/jitl"
     },
-    "keywords": [
-        "eslint",
-        "eslintconfig",
-        "config",
-        "javascript",
-        "styleguide",
-        "es2015",
-        "es2016",
-        "es2017",
-        "es2018"
-    ],
-    "author": "Zach Hardesty (https://zachhardesty.com)",
-    "contributors": [
-        {
-            "name": "Zach Hardesty",
-            "url": "https://zachhardesty.com"
-        },
-        {
-            "name": "Jake Teton-Landis",
-            "url": "https://twitter.com/jitl"
-        },
-        {
-            "name": "Jordan Harband",
-            "email": "ljharb@gmail.com",
-            "url": "http://ljharb.codes"
-        },
-        {
-            "name": "Harrison Shoff",
-            "url": "https://twitter.com/hshoff"
-        }
-    ],
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/zachhardesty7/eslint-config-hardesty/issues"
+    {
+      "name": "Jordan Harband",
+      "email": "ljharb@gmail.com",
+      "url": "http://ljharb.codes"
     },
-    "homepage": "https://github.com/zachhardesty7/eslint-config-hardesty",
-    "dependencies": {
-        "@babel/core": "^7.15.8",
-        "@babel/eslint-parser": "^7.15.8",
-        "@babel/eslint-plugin": "^7.14.5",
-        "@typescript-eslint/eslint-plugin": "^5.48.2",
-        "@typescript-eslint/parser": "^5.48.2",
-        "escape-regex-string": "^1.0.6",
-        "eslint-config-airbnb": "^19.0.4",
-        "eslint-config-standard": "^17.0.0",
-        "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-import": "^2.25.4",
-        "eslint-plugin-jsdoc": "^37.9.4",
-        "eslint-plugin-jsx-a11y": "^6.7.1",
-        "eslint-plugin-markdown": "^2.2.1",
-        "eslint-plugin-node": "^11.1.0",
-        "eslint-plugin-optimize-regex": "^1.2.1",
-        "eslint-plugin-promise": "^6.1.1",
-        "eslint-plugin-react": "^7.32.1",
-        "eslint-plugin-react-hooks": "^4.6.0",
-        "eslint-plugin-standard": "^5.0.0",
-        "eslint-plugin-unicorn": "^37.0.1"
-    },
-    "devDependencies": {
-        "eslint": "^8.0.1",
-        "safe-publish-latest": "^2.0.0",
-        "tape": "^5.3.1"
-    },
-    "peerDependencies": {
-        "eslint": "^8.0.1"
+    {
+      "name": "Harrison Shoff",
+      "url": "https://twitter.com/hshoff"
     }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zachhardesty7/eslint-config-hardesty/issues"
+  },
+  "homepage": "https://github.com/zachhardesty7/eslint-config-hardesty",
+  "dependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/eslint-parser": "^7.15.8",
+    "@babel/eslint-plugin": "^7.14.5",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "escape-regex-string": "^1.0.6",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsdoc": "^37.9.4",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-markdown": "^2.2.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-optimize-regex": "^1.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-unicorn": "^37.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "safe-publish-latest": "^2.0.0",
+    "tape": "^5.3.1"
+  },
+  "peerDependencies": {
+    "eslint": "^8.0.1"
+  }
 }
