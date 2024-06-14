@@ -16,3 +16,4 @@ this repo.
    `eslintConfig: { "extends": ["hardesty"] },` in your `package.json`.
    - If you're using TypeScript, additionally add `"hardesty/typescript"` as a new item
      in the "extends" array after `"hardesty"`.
+     in the "extends" array after `"hardesty"`.
