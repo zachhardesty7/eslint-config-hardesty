@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-hardesty",
-  "version": "6.5.0",
+  "version": "7.0.0",
   "description": "Zach Hardesty's ESLint config, forked from Airbnb. To use, extend `hardesty` and optionally `hardesty/typescript`",
   "main": "index.js",
   "scripts": {
@@ -51,33 +51,34 @@
   },
   "homepage": "https://github.com/zachhardesty7/eslint-config-hardesty",
   "dependencies": {
-    "@babel/core": "^7.15.8",
-    "@babel/eslint-parser": "^7.15.8",
-    "@babel/eslint-plugin": "^7.14.5",
-    "@typescript-eslint/eslint-plugin": "^5.48.2",
-    "@typescript-eslint/parser": "^5.48.2",
+    "@babel/core": "^7.24.7",
+    "@babel/eslint-parser": "^7.24.7",
+    "@babel/eslint-plugin": "^7.24.7",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0",
     "escape-regex-string": "^1.0.6",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jsdoc": "^37.9.4",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-markdown": "^2.2.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsdoc": "^48.2.11",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-markdown": "^5.0.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-optimize-regex": "^1.2.1",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.32.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-promise": "^6.2.0",
+    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-standard": "^5.0.0",
-    "eslint-plugin-unicorn": "^37.0.1"
+    "eslint-plugin-unicorn": "^53.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.0.1",
+    "@types/node": "^20.14.2",
+    "eslint": "^8.57.0",
     "safe-publish-latest": "^2.0.0",
     "tape": "^5.3.1"
   },
   "peerDependencies": {
-    "eslint": "^8.0.1"
+    "eslint": "^8.57.0"
   }
 }

@@ -1,18 +1,18 @@
 // TODO: review https://github.com/xojs/eslint-config-xo/blob/main/browser.js
 
-// eslint-disable-next-line unicorn/prefer-module
-module.exports = {
+/** @type {import('eslint').ESLint.ConfigData} */
+const config = {
   extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/strict-type-checked.ts
+    'plugin:@typescript-eslint/strict-type-checked',
+    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/stylistic-type-checked.ts
+    'plugin:@typescript-eslint/stylistic-type-checked',
     'prettier',
   ],
-  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: { jsx: true },
-    project: './tsconfig.json',
+    project: true,
   },
-  plugins: [],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
@@ -24,6 +24,7 @@ module.exports = {
   ],
   rules: {
     // REVIEW: eslint-import-resolver-node
+    'no-use-before-define': 'off',
     'no-unused-vars': 'off',
     'no-empty-function': 'off',
     '@typescript-eslint/no-empty-function': ['warn', { allow: ['arrowFunctions'] }],
@@ -40,3 +41,5 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'off', // false positives in try/catch & more
   },
 }
+
+module.exports = config
