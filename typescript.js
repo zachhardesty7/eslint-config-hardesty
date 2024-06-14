@@ -25,8 +25,6 @@ module.exports = {
   rules: {
     // REVIEW: eslint-import-resolver-node
     'no-unused-vars': 'off',
-    quotes: 'off',
-    semi: 'off',
     'no-empty-function': 'off',
     '@typescript-eslint/no-empty-function': ['warn', { allow: ['arrowFunctions'] }],
     '@typescript-eslint/no-var-requires': 'off',

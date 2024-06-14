@@ -7,13 +7,16 @@ module.exports = {
   },
 
   // https://github.com/babel/babel/tree/main/eslint/babel-eslint-plugin
-  plugins: ['@babel', 'jsdoc', 'optimize-regex', 'markdown', 'unicorn'],
+  // TODO: fix markdown linting support, maybe split into separate config
+  plugins: ['@babel', 'jsdoc', 'optimize-regex', 'markdown'],
 
   extends: [
+    // https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
     'airbnb',
     'standard',
     'airbnb/hooks',
     'plugin:jsdoc/recommended',
+    // https://github.com/sindresorhus/eslint-plugin-unicorn - https://github.com/sindresorhus/eslint-plugin-unicorn#rules
     'plugin:unicorn/recommended',
     'prettier',
   ],
@@ -91,10 +94,6 @@ module.exports = {
       },
     ],
     'optimize-regex/optimize-regex': 'warn',
-    'comma-dangle': ['error', 'always-multiline'],
-    'standard/array-bracket-even-spacing': 'off',
-    'standard/computed-property-even-spacing': 'off',
-    'standard/object-curly-even-spacing': 'off',
     'no-console': 'off',
     'no-param-reassign': 'warn',
     'promise/catch-or-return': 'warn',
