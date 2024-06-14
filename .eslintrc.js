@@ -18,6 +18,7 @@ module.exports = {
     'plugin:jsdoc/recommended',
     // https://github.com/sindresorhus/eslint-plugin-unicorn - https://github.com/sindresorhus/eslint-plugin-unicorn#rules
     'plugin:unicorn/recommended',
+    // https://github.com/prettier/eslint-config-prettier
     'prettier',
   ],
 
@@ -40,6 +41,8 @@ module.exports = {
   rules: {
     // #region - unicorn
     // https://github.com/sindresorhus/eslint-plugin-unicorn
+    // FIXME: DOM API supposed to implement, but doesn't so suggestion breaks code, see: https://github.com/sindresorhus/eslint-plugin-unicorn/issues/2098
+    'unicorn/prefer-at': 'warn',
     'unicorn/prefer-number-properties': 'warn',
     'unicorn/prefer-spread': 'warn',
     'unicorn/prevent-abbreviations': 'off',
@@ -81,18 +84,6 @@ module.exports = {
     // #region - misc & recommended overrides
     'no-unused-vars': 'warn', // overridden via TS
     // could be simplified since mostly only issue with JSDoc tags
-    'max-len': [
-      'warn',
-      {
-        code: 100,
-        ignoreUrls: true,
-        ignoreComments: false,
-        ignoreRegExpLiterals: true,
-        ignoreTemplateLiterals: true,
-        ignorePattern: '^ \\* @.+',
-        ignoreStrings: true,
-      },
-    ],
     'optimize-regex/optimize-regex': 'warn',
     'no-console': 'off',
     'no-param-reassign': 'warn',
