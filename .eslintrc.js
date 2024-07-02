@@ -1,4 +1,4 @@
-// eslint-disable-next-line unicorn/prefer-module
+/** @type {import('eslint').ESLint.ConfigData} */
 module.exports = {
   reportUnusedDisableDirectives: true,
 
