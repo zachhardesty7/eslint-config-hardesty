@@ -7,6 +7,8 @@ const config = {
     'plugin:@typescript-eslint/strict-type-checked',
     // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/stylistic-type-checked.ts
     'plugin:@typescript-eslint/stylistic-type-checked',
+    'plugin:jsdoc/recommended-typescript',
+    './chunks/jsdoc.js',
     'prettier',
   ],
   parserOptions: {
@@ -17,8 +19,8 @@ const config = {
     {
       files: ['*.ts', '*.tsx'],
       rules: {
-        'jsdoc/require-param-type': 'off',
-        'jsdoc/require-returns-type': 'off',
+        'jsdoc/require-param': 'off',
+        'jsdoc/require-property': 'off',
       },
     },
   ],

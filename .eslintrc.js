@@ -8,16 +8,18 @@ module.exports = {
 
   // https://github.com/babel/babel/tree/main/eslint/babel-eslint-plugin
   // TODO: fix markdown linting support, maybe split into separate config
-  plugins: ['@babel', 'jsdoc', 'optimize-regex', 'markdown'],
+  plugins: ['@babel', 'optimize-regex', 'markdown'],
 
   extends: [
     // https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
     'airbnb',
     'standard',
     'airbnb/hooks',
-    'plugin:jsdoc/recommended',
+    // https://github.com/gajus/eslint-plugin-jsdoc / https://github.com/gajus/eslint-plugin-jsdoc#rules
+    'plugin:jsdoc/recommended-typescript-flavor',
     // https://github.com/sindresorhus/eslint-plugin-unicorn - https://github.com/sindresorhus/eslint-plugin-unicorn#rules
     'plugin:unicorn/recommended',
+    './chunks/jsdoc.js',
     // https://github.com/prettier/eslint-config-prettier
     'prettier',
   ],
@@ -26,16 +28,6 @@ module.exports = {
     es2021: true,
     browser: true,
     node: true,
-  },
-
-  settings: {
-    jsdoc: {
-      mode: 'typescript',
-      ignorePrivate: true,
-      preferredTypes: {
-        '*': false,
-      },
-    },
   },
 
   rules: {
@@ -109,30 +101,6 @@ module.exports = {
       'WithStatement',
     ],
     // #endregion
-    // #region - jsdoc
-    // https://www.npmjs.com/package/eslint-plugin-jsdoc#eslint-plugin-jsdoc-settings-allow-private-to-disable-rules-for-that-comment-block
-    'jsdoc/check-syntax': 'warn',
-    'jsdoc/require-hyphen-before-param-description': 'warn',
-    'jsdoc/require-jsdoc': [
-      'warn',
-      {
-        exemptEmptyFunctions: true,
-      },
-    ],
-    // incorrectly reports bolded words (eg **NOTE**)
-    'jsdoc/no-multi-asterisks': ['warn', { preventAtMiddleLines: false }],
-    // use temporarily until `types.d.ts` can be processed
-    'jsdoc/no-undefined-types': 'off',
-    // include typescript globals https://www.typescriptlang.org/docs/handbook/utility-types.html
-    // 'jsdoc/no-undefined-types': ['warn', { definedTypes: ['Partial', 'Readonly',
-    // 'Record', 'Pick', 'Omit', 'Exclude', 'Extract', 'NonNullable', 'Parameters',
-    // 'ConstructorParameters', 'ReturnType', 'InstanceType', 'Required',
-    // 'ThisParameterType', 'OmitThisParameter', 'ThisType'] }],
-
-    // handled by prettier
-    'jsdoc/tag-lines': 'off',
-    // #endregion
-
     // REVIEW: jsdoc commenter rules
     // 'unicorn/import-style': 'off',
     // 'promise/catch-or-return': 'off',
@@ -161,6 +129,12 @@ module.exports = {
         indent: 'off',
         semi: 'off',
         'no-unused-expressions': 'off',
+      },
+    },
+    {
+      files: ['*.cjs', '*.mjs', '*.js', '*.jsx'],
+      rules: {
+        'jsdoc/require-param-description': 'off',
       },
     },
   ],
