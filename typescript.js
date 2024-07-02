@@ -7,8 +7,6 @@ const config = {
     'plugin:@typescript-eslint/strict-type-checked',
     // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/stylistic-type-checked.ts
     'plugin:@typescript-eslint/stylistic-type-checked',
-    'plugin:jsdoc/recommended-typescript',
-    './chunks/jsdoc.js',
     'prettier',
   ],
   parserOptions: {
@@ -17,10 +15,14 @@ const config = {
   },
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['*.ts', '*.mts', '*.cts', '*.tsx'],
+      extends: ['plugin:jsdoc/recommended-typescript', './chunks/jsdoc.js'],
       rules: {
         'jsdoc/require-param': 'off',
         'jsdoc/require-property': 'off',
+
+        // rules that don't play nicely with javascript files
+        '@typescript-eslint/explicit-module-boundary-types': 'error',
       },
     },
   ],
@@ -35,7 +37,6 @@ const config = {
     '@typescript-eslint/no-extra-semi': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
-    '@typescript-eslint/explicit-module-boundary-types': 'error',
     '@typescript-eslint/no-non-null-assertion': 'error',
     // REVIEW: jsdoc commenter rules
     // 'unicorn/import-style': 'off',

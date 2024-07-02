@@ -4,7 +4,8 @@
     "overrideConfig": {
       "overrides": [
         {
-          "files": ["*.ts", "*.tsx"],
+          // "files": ["*.ts", "*.tsx"],
+          "files": ["*"],
           "extends": ["./.eslintrc.js", "./typescript.js"],
         },
       ],
