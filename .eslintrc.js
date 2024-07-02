@@ -79,6 +79,7 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-single'],
     // #endregion
     // #region - misc & recommended overrides
+    'arrow-body-style': 'off',
     'no-unused-vars': 'warn', // overridden via TS
     // could be simplified since mostly only issue with JSDoc tags
     'optimize-regex/optimize-regex': 'warn',
