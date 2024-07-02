@@ -1,5 +1,7 @@
 // eslint-disable-next-line unicorn/prefer-module
 module.exports = {
+  reportUnusedDisableDirectives: true,
+
   // TODO: https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
   parser: '@babel/eslint-parser',
   parserOptions: {
