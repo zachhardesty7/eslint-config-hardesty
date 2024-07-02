@@ -40,6 +40,9 @@ module.exports = {
     'unicorn/prefer-number-properties': 'warn',
     'unicorn/prefer-spread': 'warn',
     'unicorn/prevent-abbreviations': 'off',
+    'unicorn/no-array-callback-reference': 'off',
+    // REVIEW: can be useful in simple cases to avoid a var, like `func((await requestPromise).data)`
+    'unicorn/no-await-expression-member': 'off',
     'unicorn/no-null': 'off',
     'unicorn/explicit-length-check': 'off',
     'unicorn/filename-case': 'off',
@@ -137,6 +140,8 @@ module.exports = {
       files: ['*.cjs', '*.mjs', '*.js', '*.jsx'],
       rules: {
         'jsdoc/require-param-description': 'off',
+        // not really supported in all JS environments
+        'unicorn/prefer-top-level-await': 'off',
       },
     },
   ],
