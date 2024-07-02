@@ -11,6 +11,9 @@ type Expect<
     : 'exactly `any` type',
 > = TInput
 
+const arrTest = [1, 2, 3]
+console.log(`🚀 ~ arrTest[arrTest.length - 1]:`, arrTest[arrTest.length - 1])
+
 /**
  * cannot widen a type, only narrow
  *
