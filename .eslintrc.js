@@ -141,6 +141,7 @@ module.exports = {
       files: ['*.cjs', '*.mjs', '*.js', '*.jsx'],
       rules: {
         'jsdoc/require-param-description': 'off',
+        'jsdoc/require-returns-description': 'off',
         // not really supported in all JS environments
         'unicorn/prefer-top-level-await': 'off',
       },

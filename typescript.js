@@ -34,7 +34,6 @@ const config = {
     '@typescript-eslint/no-empty-function': ['warn', { allow: ['arrowFunctions'] }],
     '@typescript-eslint/no-var-requires': 'off',
     'promise/catch-or-return': 'off',
-    '@typescript-eslint/no-extra-semi': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-non-null-assertion': 'error',

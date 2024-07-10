@@ -91,3 +91,20 @@ declare interface Document {
   ): NodeListOf<SVGElementTagNameMap[K]>
   querySelectorAll(selectors: string): NodeListOf<HTMLElement>
 }
+
+type RawHistoryData = {
+  channel: string
+  date: string
+  duration: string
+  title: string
+  url: string
+}[]
+type HistoryData = {
+  channel: string
+  date: Date
+  duration: number
+  title: string
+  url: URL
+  watched: number
+}[]
+

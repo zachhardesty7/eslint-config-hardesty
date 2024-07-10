@@ -2,8 +2,12 @@ const arr = ['following is very long line to test max-len rule'];
 console.log(arr.map((x) => x).map((x) => x).map((x) => x).map((x) => x).map((x) => x).map((x) => x).map((x) => x).map((x) => x).map((x) => x))
 
 const arrTest = [1, 2, 3]
-console.log(`🚀 ~ arrTest[arrTest.length - 1]:`, arrTest[arrTest.length - 1])
+console.log(`🚀 ~ arrTest[arrTest.length - 1]:`, arrTest.at(-1))
 
+/**
+ *
+ * @param a
+ */
 export function test01(a) {
   console.log(a)
 }
@@ -15,4 +19,9 @@ export function test02(a) {
   return a
 }
 export function test03() {
+}
+
+export function getWatchHistory() {
+  /** @type {{}[]} */
+  const videosData = []
 }
