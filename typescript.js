@@ -7,6 +7,8 @@ const config = {
     'plugin:@typescript-eslint/strict-type-checked',
     // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/stylistic-type-checked.ts
     'plugin:@typescript-eslint/stylistic-type-checked',
+    // https://github.com/prettier/eslint-config-prettier - includes:
+    // - https://github.com/prettier/eslint-config-prettier/blob/main/index.js
     'prettier',
   ],
   parserOptions: {
@@ -16,6 +18,7 @@ const config = {
   overrides: [
     {
       files: ['*.ts', '*.mts', '*.cts', '*.tsx'],
+      // https://github.com/gajus/eslint-plugin-jsdoc/blob/288f0ae5d45183321493131ecf8c377fd6a5a5f3/src/index.js#L221
       extends: ['plugin:jsdoc/recommended-typescript', './chunks/jsdoc.js'],
       rules: {
         'jsdoc/require-param': 'off',

@@ -13,16 +13,24 @@ module.exports = {
   plugins: ['@babel', 'optimize-regex', 'markdown'],
 
   extends: [
-    // https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
+    // https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb - includes:
+    // - https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/index.js
+    // - https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/rules/react.js
+    // - https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/rules/react-a11y.js
     'airbnb',
+    // https://github.com/standard/eslint-config-standard - includes:
+    // - https://github.com/standard/eslint-config-standard/blob/master/src/index.ts
     'standard',
+    // https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/rules/react-hooks.js
     'airbnb/hooks',
-    // https://github.com/gajus/eslint-plugin-jsdoc / https://github.com/gajus/eslint-plugin-jsdoc#rules
+    // https://github.com/gajus/eslint-plugin-jsdoc#rules - includes:
+    // - https://github.com/gajus/eslint-plugin-jsdoc/blob/288f0ae5d45183321493131ecf8c377fd6a5a5f3/src/index.js#L249
     'plugin:jsdoc/recommended-typescript-flavor',
     // https://github.com/sindresorhus/eslint-plugin-unicorn - https://github.com/sindresorhus/eslint-plugin-unicorn#rules
     'plugin:unicorn/recommended',
     './chunks/jsdoc.js',
-    // https://github.com/prettier/eslint-config-prettier
+    // https://github.com/prettier/eslint-config-prettier - includes:
+    // - https://github.com/prettier/eslint-config-prettier/blob/main/index.js
     'prettier',
   ],
 
