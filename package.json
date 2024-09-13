@@ -3,6 +3,13 @@
   "version": "7.1.4",
   "description": "Zach Hardesty's ESLint config, forked from Airbnb. To use, extend `hardesty` and optionally `hardesty/typescript`",
   "main": "index.js",
+  "files": [
+    "/index.js",
+    "/.eslintrc.js",
+    "/node.js",
+    "/typescript.js",
+    "/chunks"
+  ],
   "scripts": {
     "prepublishOnly": "safe-publish-latest",
     "pub": "npm publish",
