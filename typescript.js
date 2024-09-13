@@ -21,6 +21,8 @@ const config = {
       // https://github.com/gajus/eslint-plugin-jsdoc/blob/288f0ae5d45183321493131ecf8c377fd6a5a5f3/src/index.js#L221
       extends: ['plugin:jsdoc/recommended-typescript', './chunks/jsdoc.js'],
       rules: {
+        // REVIEW: fixes `no-unused-vars` false positives for type only imports for jsdoc! `disableReporting` prevents false positive problems by not actually running the rule, just marking types as used for jsdoc
+        'jsdoc/no-undefined-types': ['warn', { disableReporting: true }],
         'jsdoc/require-param': 'off',
         'jsdoc/require-property': 'off',
 
