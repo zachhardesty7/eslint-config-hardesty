@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-hardesty",
-  "version": "7.1.3",
+  "version": "7.1.4",
   "description": "Zach Hardesty's ESLint config, forked from Airbnb. To use, extend `hardesty` and optionally `hardesty/typescript`",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zachhardesty7/eslint-config-hardesty"
+    "url": "git+https://github.com/zachhardesty7/eslint-config-hardesty.git"
   },
   "keywords": [
     "eslint",
