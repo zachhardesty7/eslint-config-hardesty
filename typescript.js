@@ -39,13 +39,18 @@ const config = {
     '@typescript-eslint/no-empty-function': ['warn', { allow: ['arrowFunctions'] }],
     '@typescript-eslint/no-var-requires': 'off',
     'promise/catch-or-return': 'off',
+    // we don't allow non-nullable assertions, so this sometimes autofixes into an error
+    '@typescript-eslint/non-nullable-type-assertion-style': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-non-null-assertion': 'error',
-    // REVIEW: jsdoc commenter rules
-    // 'unicorn/import-style': 'off',
-
     '@typescript-eslint/no-floating-promises': 'off', // false positives in try/catch & more
+    // allow numbers since they're always readable & it's extremely unlikely someone overrode the `.toString()` method
+    // REVIEW: preferably should allow `Date` since it produces a readable string
+    '@typescript-eslint/restrict-template-expressions': [
+      'error',
+      { allowNumber: true },
+    ],
   },
 }
 
