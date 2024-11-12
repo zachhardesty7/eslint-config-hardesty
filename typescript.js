@@ -45,6 +45,16 @@ const config = {
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-non-null-assertion': 'error',
     '@typescript-eslint/no-floating-promises': 'off', // false positives in try/catch & more
+    // suggests changes that alter behavior and could (rarely) be dangerous
+    '@typescript-eslint/prefer-nullish-coalescing': [
+      'warn',
+      {
+        // these options disable most suggestions that alter behavior
+        ignorePrimitives: true,
+        ignoreMixedLogicalExpressions: true,
+        ignoreConditionalTests: true,
+      },
+    ],
     // allow numbers since they're always readable & it's extremely unlikely someone overrode the `.toString()` method
     // REVIEW: preferably should allow `Date` since it produces a readable string
     '@typescript-eslint/restrict-template-expressions': [
