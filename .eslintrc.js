@@ -95,16 +95,6 @@ module.exports = {
     'no-param-reassign': 'warn',
     'promise/catch-or-return': 'warn',
     'promise/always-return': 'warn',
-    'import/prefer-default-export': 'off',
-    'import/namespace': 'off', // <- warn
-    /** `type="module"` requires ext, plus this is more style than anything else */
-    'import/extensions': 'off',
-    'sort-imports': [
-      'warn',
-      {
-        ignoreDeclarationSort: true,
-      },
-    ],
     'space-before-function-paren': ['error', 'never'],
     curly: ['error', 'all'],
     'max-statements-per-line': 'error',
@@ -120,7 +110,18 @@ module.exports = {
     // 'promise/catch-or-return': 'off',
 
     // #region - imports
+    // REVIEW: seems to be broken in many projects
     'import/no-unresolved': 'off',
+    'import/prefer-default-export': 'off',
+    'import/namespace': 'off', // <- warn
+    /** `type="module"` requires ext, plus this is more style than anything else */
+    'import/extensions': 'off',
+    'sort-imports': [
+      'warn',
+      {
+        ignoreDeclarationSort: true,
+      },
+    ],
     // #endregion
   },
 
