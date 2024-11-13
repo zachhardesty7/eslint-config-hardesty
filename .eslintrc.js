@@ -57,6 +57,9 @@ module.exports = {
     'unicorn/prefer-node-protocol': 'off', // too soon
     'unicorn/prefer-module': 'off', // too soon
     'unicorn/template-indent': 'off',
+    // not supported everywhere yet (Node.js commonjs)
+    // TODO: possible to only run when not node env?
+    'unicorn/prefer-top-level-await': 'off',
     // #endregion
     // #region - react
     'react/state-in-constructor': ['warn', 'never'],
