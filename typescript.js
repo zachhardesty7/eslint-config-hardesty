@@ -55,6 +55,20 @@ const config = {
         ignoreConditionalTests: true,
       },
     ],
+    // any/unknown and non-nullish vars disabled as those suggestions frequently alter behavior,
+    // should likely stay warning as some suggestions still alter behavior
+    '@typescript-eslint/prefer-optional-chain': [
+      'warn',
+      {
+        checkAny: false,
+        checkUnknown: false,
+        checkString: true,
+        checkNumber: true,
+        checkBoolean: true,
+        checkBigInt: true,
+        requireNullish: true,
+      },
+    ],
     // allow numbers since they're always readable & it's extremely unlikely someone overrode the `.toString()` method
     // REVIEW: preferably should allow `Date` since it produces a readable string
     '@typescript-eslint/restrict-template-expressions': [
