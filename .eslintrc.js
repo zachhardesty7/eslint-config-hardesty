@@ -56,6 +56,8 @@ module.exports = {
     'unicorn/filename-case': 'off',
     'unicorn/prefer-node-protocol': 'off', // too soon
     'unicorn/prefer-module': 'off', // too soon
+    // often too many problems & possible issues already reported by TS rule
+    'unicorn/switch-case-braces': 'off',
     'unicorn/template-indent': 'off',
     // not supported everywhere yet (Node.js commonjs)
     // TODO: possible to only run when not node env?
