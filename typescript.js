@@ -16,6 +16,7 @@ const config = {
     project: true,
   },
   overrides: [
+    // #region - applied only to TS files
     {
       files: ['*.ts', '*.mts', '*.cts', '*.tsx'],
       // https://github.com/gajus/eslint-plugin-jsdoc/blob/288f0ae5d45183321493131ecf8c377fd6a5a5f3/src/index.js#L221
@@ -26,10 +27,29 @@ const config = {
         'jsdoc/require-param': 'off',
         'jsdoc/require-property': 'off',
 
-        // rules that don't play nicely with javascript files
-        '@typescript-eslint/explicit-module-boundary-types': 'error',
+        // #region hide - TS rules that don't play nicely with JS
+        // less strict version of "@typescript-eslint/explicit-function-return-type"
+        // FIXME: marks overridden class methods, even if they don't change the type
+        '@typescript-eslint/explicit-module-boundary-types': [
+          'warn',
+          {
+            allowedNames: [
+              // allow React lifecycle methods to be implicitly typed
+              'render',
+              'componentDidUpdate',
+              'componentDidMount',
+              'componentWillUnmount',
+              'componentDidCatch',
+              'shouldComponentUpdate',
+            ],
+            // handled by `noExplicitAny`
+            allowArgumentsExplicitlyTypedAsAny: true,
+          },
+        ],
+        // #endregion
       },
     },
+    // #endregion
   ],
   rules: {
     // REVIEW: eslint-import-resolver-node
