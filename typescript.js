@@ -26,6 +26,8 @@ const config = {
         'jsdoc/no-undefined-types': ['warn', { disableReporting: true }],
         'jsdoc/require-param': 'off',
         'jsdoc/require-property': 'off',
+        // NOTE: prevents `prettier-plugin-jsdoc` from immediately removing empty comment in TS. alternative: set `fixerMessage` to ` description` to add content to the comment so it isn't removed
+        'jsdoc/require-jsdoc': 'off',
 
         // #region hide - TS rules that don't play nicely with JS
         // less strict version of "@typescript-eslint/explicit-function-return-type"
