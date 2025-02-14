@@ -128,6 +128,10 @@ module.exports = {
       },
     ],
     // #endregion
+
+    // #region - airbnb overrides
+    'no-continue': 'off',
+    // #endregion
   },
 
   overrides: [
