@@ -100,7 +100,15 @@ module.exports = {
     'no-param-reassign': 'warn',
     'promise/catch-or-return': 'warn',
     'promise/always-return': 'warn',
-    'space-before-function-paren': ['error', 'never'],
+    // TODO: remove style rule
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'always',
+        named: 'never',
+        asyncArrow: 'always',
+      },
+    ],
     curly: ['error', 'all'],
     'max-statements-per-line': 'error',
     'no-restricted-syntax': [
