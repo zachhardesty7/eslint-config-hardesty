@@ -3,9 +3,9 @@
 /** @type {import('eslint').ESLint.ConfigData} */
 const config = {
   extends: [
-    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/strict-type-checked.ts
+    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslintrc/strict-type-checked.ts
     'plugin:@typescript-eslint/strict-type-checked',
-    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/stylistic-type-checked.ts
+    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslintrc/stylistic-type-checked.ts
     'plugin:@typescript-eslint/stylistic-type-checked',
     // https://github.com/prettier/eslint-config-prettier - includes:
     // - https://github.com/prettier/eslint-config-prettier/blob/main/index.js
@@ -54,6 +54,10 @@ const config = {
     // #endregion
   ],
   rules: {
+    // #region - replace JS rules with TS equivalents
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': 'error',
+    // #endregion
     // REVIEW: eslint-import-resolver-node
     'no-use-before-define': 'off',
     'no-unused-vars': 'off',
