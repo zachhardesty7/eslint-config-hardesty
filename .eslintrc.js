@@ -56,6 +56,8 @@ module.exports = {
     'unicorn/filename-case': 'off',
     'unicorn/prefer-node-protocol': 'off', // too soon
     'unicorn/prefer-module': 'off', // too soon
+    // REVIEW: marginally faster, but kinda annoying when: mixing `Set` and `Array` & deciding to use other `Array` methods later
+    'unicorn/prefer-set-has': 'off',
     // often too many problems & possible issues already reported by TS rule
     'unicorn/switch-case-braces': 'off',
     'unicorn/template-indent': 'off',
