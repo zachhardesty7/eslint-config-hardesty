@@ -141,6 +141,7 @@ module.exports = {
 
     // #region - airbnb overrides
     'no-continue': 'off',
+    'no-return-await': 'off',
     // #endregion
   },
 
