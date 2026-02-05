@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-hardesty",
-  "version": "7.4.1",
+  "version": "7.5.0",
   "description": "Zach Hardesty's ESLint config, forked from Airbnb. To use, extend `hardesty` and optionally `hardesty/typescript`",
   "main": "index.js",
   "files": [
@@ -61,8 +61,8 @@
     "@babel/core": "^7.24.7",
     "@babel/eslint-parser": "^7.24.7",
     "@babel/eslint-plugin": "^7.24.7",
-    "@typescript-eslint/eslint-plugin": "^7.13.0",
-    "@typescript-eslint/parser": "^7.13.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
     "escape-regex-string": "^1.0.6",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.1.0",
