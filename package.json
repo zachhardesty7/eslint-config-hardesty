@@ -10,6 +10,13 @@
     "/typescript.js",
     "/chunks"
   ],
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "./.eslintrc.js",
+      "./typescript.js"
+    ]
+  },
   "scripts": {
     "prepublishOnly": "safe-publish-latest",
     "pub": "npm publish",

@@ -14,23 +14,32 @@ test('all entry point(s) parse', (t) => {
   t.end()
 })
 
-test('load config in eslint to validate all syntax rules are correct', (t) => {
-  const { CLIEngine } = eslint
+test('load config in eslint to validate all syntax rules are correct', async (t) => {
+  // FIXME: https://eslint.org/docs/latest/use/migrate-to-8.0.0#-the-cliengine-class-has-been-removed
+  // https://eslint.org/docs/latest/integrate/nodejs-api#eslint-class
+  const { ESLint } = eslint
 
-  const cli = new CLIEngine({
+  const cli = new ESLint({
+    // FIXME: how to specify file?
     useEslintrc: false,
-    configFile: '.eslintrc.js',
   })
+
+  const promises = [];
 
   for (const fileName of fs.readdirSync('./tests/')) {
     if (!fileName.includes('test')) {
       const file = fs.readFileSync(`./tests/${fileName}`)
-      const result = cli.executeOnText(file.toString())
-      t.equal(result.errorCount, 0)
-      if (result.errorCount) {
-        console.log(`found errors in ${fileName}`)
-        console.log(result.results[0].messages)
-      }
+      promises.push(cli.lintText(file.toString()))
+    }
+  }
+
+  const results = await Promise.all(promises)
+
+  for (const result of results) {
+    t.equal(result[0].errorCount, 0)
+    if (result[0].errorCount) {
+      console.log(`found errors in ${result[0].filePath}`)
+      console.log(result[0].messages)
     }
   }
 
